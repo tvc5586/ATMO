@@ -1,0 +1,22 @@
+Specie,Initial Value,Unit,henry,f0
+CH2O,0,ppbv,1,0
+CO,0,ppbv,1,0
+H,0,ppbv,1,0
+H2O,0,ppbv,1,0
+H2O2,0,ppbv,1,0
+HO,0,ppbv,1,0
+HO2,0,ppbv,1,0
+HOHO2,0,ppbv,1,0
+HONO,0,ppbv,1,0
+MozProd1,0,ppbv,1,0
+MozRO2,0,ppbv,1,0
+MyOHPr1,0,ppbv,1,0
+MyOHRO,0,ppbv,1,0
+MyOHRO2,0,ppbv,1,0
+Myrcene,0,ppbv,1,0
+NO,0,ppbv,1,0
+NO2,0,ppbv,1,0
+Nitrate,0,ppbv,1,0
+O3,0,ppbv,1,0
+OHHO2,0,ppbv,1,0
+Products,0,ppbv,1,0
