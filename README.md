@@ -35,17 +35,17 @@ This program is still under construction. Limitations include:
 2. Depending on the reaction functions used, this program will generate species that are chemically incorrect.
 3. Each specie configuration file is unique to the selected equation files. Users cannot use specie configuration file generated for one set of equations for another set of equations.
 4. Specie unit can only be ppbv or molec\_cm3.
-5. For any rate expression that involves calculation, there must be a space before and after a function call.  
- There cannot be any space between arguments for a function.  
- For numeric operands (including numeric variables), there could be any number of spaces between them and operators.  
- The first character in expression cannot be a parenthese.  
+5. The reaction functions must be formatted correctly. The requirements are:
+    1. For any rate expression that involves calculation, there must be a space before and after a function call.  
+    2. There cannot be any space between arguments for a function.  
+    3. For numeric operands (including numeric variables), there could be any number of spaces between them and operators.  
+    4. The first character in expression cannot be a parenthese.  
  Examples of correctly formatted rate expressions:
 
         0.21* ARR2(3.30e-11,-55,TEMP) +0.78* ARR2(2.15e-11,-110,TEMP)
         1.44e-13\*(1+(C\_M/4.2e+19))
         k37(TEMP,C\_M,C\_H2O)
         7.2e-34 \*0.78084\* C\_M\*0.20946\*C\_M * (TEMP / 300)\*\*(-2.6)
-
  Examples of incorrectly formatted rate expressions:
 
         (0.21\*ARR2( 3.30e-11,-55.0,TEMP) + 0.78\*ARR2(2.15e-11,-110,TEMP))
@@ -59,7 +59,7 @@ This program is still under construction. Limitations include:
         TROEE
         k46
         k37
-        THERMAL\_T2 functions.
+        THERMAL\_T2
 
 ### 5. Contributors
 
