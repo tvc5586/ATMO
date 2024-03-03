@@ -39,16 +39,20 @@ This program is still under construction. Limitations include:
  There cannot be any space between arguments for a function.  
  For numeric operands (including numeric variables), there could be any number of spaces between them and operators.  
  The first character in expression cannot be a parenthese.  
- Examples of correctly formatted rate expressions:  
-        a) 0.21* ARR2(3.30e-11,-55,TEMP) +0.78* ARR2(2.15e-11,-110,TEMP)
-        b) 1.44e-13\*(1+(C\_M/4.2e+19))
-        c) k37(TEMP,C\_M,C\_H2O)
-        d) 7.2e-34 \*0.78084\* C\_M\*0.20946\*C\_M * (TEMP / 300)\*\*(-2.6)
+ Examples of correctly formatted rate expressions:
 
- Examples of incorrectly formatted rate expressions:  
-        a) (0.21\*ARR2( 3.30e-11,-55.0,TEMP) + 0.78\*ARR2(2.15e-11,-110,TEMP))
-        b) k37( TEMP, C\_M, C\_H2O )
+        0.21* ARR2(3.30e-11,-55,TEMP) +0.78* ARR2(2.15e-11,-110,TEMP)
+        1.44e-13\*(1+(C\_M/4.2e+19))
+        k37(TEMP,C\_M,C\_H2O)
+        7.2e-34 \*0.78084\* C\_M\*0.20946\*C\_M * (TEMP / 300)\*\*(-2.6)
+
+ Examples of incorrectly formatted rate expressions:
+
+        (0.21\*ARR2( 3.30e-11,-55.0,TEMP) + 0.78\*ARR2(2.15e-11,-110,TEMP))
+        k37( TEMP, C\_M, C\_H2O )
+
 6. Currently, this program only has the following functions built in:
+
         ARR
         ARR2
         TROE
