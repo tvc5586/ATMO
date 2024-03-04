@@ -83,4 +83,4 @@ Zackary Moon's model: https://github.com/zmoon/boxmod
 
 ### 8. Diagram
 
-![Program Diagram](/ATMO/blob/main/ATMO_New%20Structure.png)
+![Program Diagram](/ATMO/ATMO_New%20Structure.png)
