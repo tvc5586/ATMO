@@ -76,3 +76,11 @@ Thanks to the contributors, all of them are from Penn State University
 ### 6. License
 
 MIT
+
+### 7. Citation
+
+Zackary Moon's model: https://github.com/zmoon/boxmod
+
+### 8. Diagram
+
+![Program Diagram](/ATMO/blob/main/ATMO_New%20Structure.png)
