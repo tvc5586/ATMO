@@ -61,7 +61,7 @@ This program is still under construction. Limitations include:
         TROEE
         k46
         k37
-        THERMAL\_T2
+        THERMAL_T2
 
 ### 5. Contributors
 
