@@ -257,16 +257,32 @@ def main(Input):
   return 1
 
 if __name__ == "__main__":
-
+  
+    generate_specie_file = True
+    specie_file_name = ""
+  
+    # Select folder containing all equations
     eqn_file_list = [join(getcwd(), "Equations", "racm.csv")]
-
     species = bm.load.read_csvs(eqn_file_list, True)
     mech = bm.EqnSet(species, name="Specie_Gen", long_name="Specie_Generation")
     all_spc = mech.spcs # List of all species
 
-    check = main([getcwd(), "test_output",
-                  "Off", "On", "On", "On", "Off",
-                  1, 300,
-                  [2012.0, 3.0,   24.0, 71.2906,  156.7886,  156.7886],
-                  all_spc, eqn_file_list, 
-                  join(getcwd(), "racm_spc.csv")])
+    # Generate specie file
+    if(generate_specie_file):
+      temp = np.full((len(all_spc), 5), "", dtype = object)
+      temp[:, 0] = all_spc
+      pd.DataFrame(temp, columns = ["Specie", "Initial Value", "Unit", "henry", "f0"]).to_csv(os.path.join(os.getcwd(), specie_file_name), index = False, header = True) 
+
+    # Run program
+    else
+    #           output folder, output file name
+      _ = main([getcwd(),      "test_output",
+    #           box model, altitude, vmix, decomp, temperature
+                "Off",     "On",     "On", "On",   "Off",
+    #           running days, timestamp (in seconds)
+                1,            300,
+    #           year,    month, day,  latitude, longitude, STD longitude
+                [2012.0, 3.0,   24.0, 71.2906,  156.7886,  156.7886],
+                all_spc, eqn_file_list, 
+    #           specie file
+                join(getcwd(), specie_file_name)])
